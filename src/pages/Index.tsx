@@ -112,7 +112,7 @@ const Index = () => {
       <section id="home" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Профессиональный буст MMR
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -179,20 +179,20 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 mb-6">
+            <div className="bg-gradient-to-br from-primary/15 via-secondary/10 to-accent/10 border border-primary/30 rounded-lg p-6 mb-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Разница MMR</p>
-                  <p className="text-3xl font-bold text-primary">{mmrDifference > 0 ? `+${mmrDifference}` : mmrDifference}</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{mmrDifference > 0 ? `+${mmrDifference}` : mmrDifference}</p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-muted-foreground mb-1">Стоимость</p>
-                  <p className="text-3xl font-bold">{totalPrice.toFixed(0)}₽</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">{totalPrice.toFixed(0)}₽</p>
                 </div>
               </div>
             </div>
 
-            <Button size="lg" className="w-full text-lg">
+            <Button size="lg" className="w-full text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
               Заказать буст
               <Icon name="ArrowRight" className="ml-2" size={20} />
             </Button>
@@ -200,13 +200,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4 bg-secondary/30">
+      <section id="services" className="py-20 px-4 bg-secondary/10">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Наши услуги</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Наши услуги</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5 cursor-pointer group">
-                <div className="bg-primary/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <Card key={index} className="p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 cursor-pointer group bg-card/50 backdrop-blur">
+                <div className="bg-gradient-to-br from-primary/15 to-secondary/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:from-primary/25 group-hover:to-secondary/20 transition-colors">
                   <Icon name={service.icon as any} className="text-primary" size={28} />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
@@ -220,13 +220,13 @@ const Index = () => {
 
       <section id="reviews" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Отзывы клиентов</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Отзывы клиентов</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {reviews.map((review, index) => (
-              <Card key={index} className="p-6 bg-card/50 backdrop-blur border-border/50">
+              <Card key={index} className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/30 transition-colors">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Icon key={i} name="Star" className="text-yellow-500 fill-yellow-500" size={16} />
+                    <Icon key={i} name="Star" className="text-accent fill-accent" size={16} />
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">{review.text}</p>
@@ -240,9 +240,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-20 px-4 bg-secondary/30">
+      <section id="faq" className="py-20 px-4 bg-secondary/10">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Частые вопросы</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Частые вопросы</h2>
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-border/50">
@@ -260,7 +260,7 @@ const Index = () => {
 
       <section id="contacts" className="py-20 px-4">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Связаться с нами</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Связаться с нами</h2>
           <Card className="p-8 bg-card/50 backdrop-blur border-border/50">
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3 text-muted-foreground">
@@ -283,7 +283,7 @@ const Index = () => {
                 <Input placeholder="Ваше имя" className="bg-background/50" />
                 <Input placeholder="Telegram или Email" className="bg-background/50" />
                 <Textarea placeholder="Сообщение" rows={4} className="bg-background/50" />
-                <Button className="w-full">
+                <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
                   Отправить
                   <Icon name="Send" className="ml-2" size={16} />
                 </Button>
@@ -293,7 +293,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="border-t border-border/50 py-8 px-4 bg-secondary/20">
+      <footer className="border-t border-border/50 py-8 px-4 bg-secondary/10">
         <div className="container mx-auto max-w-6xl text-center text-muted-foreground text-sm">
           <p>© 2024 DotaBoost. Все права защищены.</p>
           <p className="mt-2">Профессиональный буст MMR в Dota 2</p>
