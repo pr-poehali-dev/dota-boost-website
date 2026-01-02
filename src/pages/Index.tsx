@@ -92,9 +92,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Icon name="Zap" className="text-primary" size={28} />
-            <span className="text-2xl font-bold text-primary">DotaBoost</span>
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/files/logoza.ru (1).png" 
+              alt="DotaBoost Logo" 
+              className="h-12 w-auto"
+            />
           </div>
           <div className="hidden md:flex gap-8">
             <a href="#home" className="text-muted-foreground hover:text-foreground transition-colors">Главная</a>
